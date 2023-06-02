@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Redressed&family=Roboto:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+section {
+  position: relative;
+  min-height: 100vh;
+  background: #557085;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: 0.5s;
+}
+section.active {
+  background-color: #3e3f39;
+}
+section .container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: whitesmoke;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+section .container .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+section .container .user .keyimg {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transition: 0.5;
+}
+section .container .user .keyimg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section .container .user .formbox {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+section .container .user .formbox form h2 {
+  font-size: 20px;
+  font-weight: 400px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: rgb(68, 44, 44);
+}
+section .container .user .formbox form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background-color: whitesmoke;
+  color: rgb(82, 31, 31);
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 15px;
+  margin: 8px 0px;
+  letter-spacing: 1px;
+  font-weight: 300px;
+}
+section .container .user .formbox form input[type="submit"] {
+  max-width: 100px;
+  background: #3d4da3cc;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500px;
+  letter-spacing: 1.5px;
+  transition: 0.5s;
+}
+section .container .user.signupbox .formbox form input[type="submit"] {
+  background: red;
+}
+
+section .container .user .formbox form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: #557085;
+  text-transform: uppercase;
+  font-weight: uppercase;
+  font-weight: 400px;
+}
+section .container .user .formbox form .signup a {
+  font-weight: 1000;
+  text-decoration: none;
+  color: black;
+}
+section .container .signupbox {
+  pointer-events: none;
+}
+section .container.active .signupbox {
+  pointer-events: initial;
+}
+section .container .signupbox .formbox {
+  top: 100%;
+}
+section .container.active .signupbox .formbox {
+  top: 0;
+}
+section .container .signupbox .keyimg {
+  top: -100%;
+  transition: 0.5s;
+}
+section .container.active .signupbox .keyimg {
+  top: 0;
+}
+section .container .signinbox .formbox {
+  top: 0;
+}
+section .container.active .signinbox .formbox {
+  top: 100%;
+}
+section .container .signinbox .keyimg {
+  top: 0;
+  transition: 0.5s;
+}
+section .container.active .signinbox .keyimg {
+  top: -100%;
+}
+@media (max-width: 756px) {
+  section .container {
+    max-width: 400px;
+  }
+  section .container .keyimg {
+    display: none;
+  }
+  section .container .user .formbox {
+    width: 100%;
+  }
+  section .container .active .signinbox .formbox {
+    top: -100%;
+  }
+}
+#errormsg {
+  color: red;
+  font-size: smaller;
+  font-weight: 500;
+}
+section .container .user.signupbox .formbox .name_details .fa{
+  position: absolute;
+  left: 307px;
+  top: 123px;
+}
+section .container .user.signupbox .formbox .name_details.errors .fa{
+  position: absolute;
+  left: 307px;
+  top: 102px;
+}
+section .container .user.signupbox .formbox .name_details.errors input{
+  border: 2px solid red;
+}
+section .container .user.signupbox .formbox .name_details.succuss input{
+  border: 2px solid rgb(24, 202, 24);
+}
+section .container .user.signupbox .formbox .name_details.succuss .fa{
+  color: rgb(24, 202, 24);
+}
+section .container .user.signupbox .formbox .name_details.errors .fa{
+  color: red;
+}
+section .container .user.signupbox .formbox .name_details span{
+  display: none;
+}
+section .container .user.signupbox .formbox .name_details.errors span{
+  color: red;
+  font-size: smaller;
+  display: block;
+}
+section .container .user.signupbox .formbox .name_details.succuss span{
+  color: rgb(24, 202, 24);
+}
+/* --------------------------------------------------------------------- */
+section .container .user.signupbox .formbox .name_detail .fa{
+  position: absolute;
+  left: 307px;
+  top: 184px;
+}
+section .container .user.signupbox .formbox .name_detail.errors .fa{
+  position: absolute;
+  left: 307px;
+  top: 184px;
+}
+section .container .user.signupbox .formbox .name_detail.errors input{
+  border: 2px solid red;
+}
+section .container .user.signupbox .formbox .name_detail.succuss input{
+  border: 2px solid rgb(24, 202, 24);
+}
+section .container .user.signupbox .formbox .name_detail.succuss .fa{
+  color: rgb(24, 202, 24);
+}
+section .container .user.signupbox .formbox .name_detail.errors .fa{
+  color: red;
+}
+section .container .user.signupbox .formbox .name_detail span{
+  display: none;
+}
+section .container .user.signupbox .formbox .name_detail.errors span{
+  color: red;
+  font-size: smaller;
+  display: block;
+}
+section .container .user.signupbox .formbox .name_detail.succuss span{
+  color: rgb(24, 202, 24);
+}
